@@ -33,7 +33,6 @@ class PostController extends Controller
         $post->attachTags(['recent', 'new', 'old']);
         $tags = $post->tags;
         return $tags;
-
     }
 
     public function detach()
@@ -51,11 +50,10 @@ class PostController extends Controller
         $h = $post->tags()->attach($tag);
         return $post->tags;
     }
-    
 
     public function eluqu()
     {
-        
+
         // return "hello";
         // $posts = Post::whereDoesntHave('comments', function (Builder $query) {
         //     $query->where('title', 'like', 'code%');
@@ -119,6 +117,4 @@ class PostController extends Controller
         $collection = collect([10, 20, 30, 44, 50]);
         return $collection->avg();
     }
-
-
 }
